@@ -70,12 +70,12 @@ app.layout = dbc.Container([
                 dbc.Col(dcc.Graph(id='bar-chart'), width=6)
             ])
         ], width=9)
-    ], style={'margin-bottom': '20px'}),
+    ], style= {'margin': '20px', 'padding':'10px' } ),
     
     dbc.Row([
         dbc.Col(dcc.Graph(id='line-chart'), width=6),
         dbc.Col(dcc.Graph(id='gold-price-chart'), width=6)
-    ], style={'margin-top': '20px'})
+    ], style={'margin-top': '20px', 'height': '100%' })
 ], fluid=True)
 
 # Callbacks
@@ -95,10 +95,10 @@ def update_charts(start_year, end_year, top_n):
     df_filtered = gold_data.gold_hist()
 
     # Pie Chart
-    pie_fig = px.pie(df_ranked[1:], values='Total Gold Production', names='Entity', title='Proporção dos Maiores Produtores de Ouro')
+    pie_fig = px.pie(df_ranked[1:], values='Total Gold Production', names='Entity', title=f'Proporção dos Maiores Produtores de Ouro ({start_year}-{end_year})')
 
     # Bar Chart
-    bar_fig = px.bar(df_ranked[1:], x='Entity', y='Total Gold Production', title='Produção Total dos Maiores Produtores de Ouro')
+    bar_fig = px.bar(df_ranked[1:], x='Entity', y='Total Gold Production', title=f'Produção Total dos Maiores Produtores de Ouro ({start_year}-{end_year})')
 
     # Line Chart
     line_fig = px.line(df_filtered, x='Year', y='Gold Production', color='Entity', title='Produção de Ouro ao Longo do Tempo')
