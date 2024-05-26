@@ -1,6 +1,6 @@
 # Gold Production Dashboard
 
-Este projeto é uma dashboard interativa criada usando o framework Dash e Plotly para visualizar dados de produção de ouro e preço do ouro ao longo do tempo. A dashboard permite aos usuários selecionar intervalos de datas e o número de maiores produtores para análise.
+Este pequeno projeto é uma dashboard interativa criada usando o framework Dash e Plotly para visualizar dados de produção de ouro e preço do ouro ao longo do tempo. A dashboard permite aos usuários selecionar intervalos de datas e o número de maiores produtores para análise.
 
 ## Visão Geral
 
