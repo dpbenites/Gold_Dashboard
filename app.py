@@ -5,6 +5,7 @@ import pandas as pd
 import dash_bootstrap_components as dbc
 from dash_bootstrap_templates import load_figure_template
 
+#vapor
 load_figure_template("vapor")
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.VAPOR])
 
